@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notifications</title>
+</head>
+<body>
+    <div>
+        Custom Notification: <input type="text" value="Test Notification" placeholder="Notification" id="notification_input"><button onclick="sendNotification(document.getElementById('notification_input').value)">Send</button>
+        <br>
+        Simple Notification: <button onclick='sendNotification("Simple Notification", "{}")'>Send</button>
+        <br>
+        Close Notification: <button onclick='closeNotification()'>Close</button>
+        <br>
+        Test Complex Notification: <button onclick='sendNotification("title", \'{"body":"' + notification_body + '","icon":"' + notification_icon + '","dir":"' + notification_dir + '","lang":"' + notification_lang + '","requireInteraction":' + notification_requireInteraction + ',"silent":' + notification_silent + '}\')'>Send</button>
+    </div>
+    <script>
+    // Set variables for Complex Notification example
+    notification_body = 'Body text';
+    notification_icon = 'https:\/\/starfiles.co/favicon.ico';
+    notification_dir = 'ltr';
+    notification_lang = 'en';
+    notification_requireInteraction = false;
+    notification_silent = true;
+    function notificationClicked(e){
+        e.preventDefault(); // Prevent the browser from focusing the Notification's tab
+        window.open('https://starfiles.co', '_blank');
+        closeNotification();
+    }
+    function notificationShown(){
+        console.log('Notification shown');
+    }
+    function notificationClosed(){
+        console.log('Notification closed');
+    }
+    </script>
+    <script src="notifications.js"></script>
+</body>
+</html>
