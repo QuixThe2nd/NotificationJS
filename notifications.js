@@ -26,13 +26,16 @@ function sendNotification(title, configobj){
         console.log(permission);
     }
     notification.onclick = function(e){
-        notificationClicked();
+        if(typeof notificationClicked === 'function')
+            notificationClicked();
     }
     notification.onclose = function(){
-        notificationClosed();
+        if(typeof notificationClosed === 'function')
+            notificationClosed();
     };
     notification.onshow = function(){
-        notificationShown();
+        if(typeof notificationShown === 'function')
+            notificationShown();
     };
     window.addEventListener('close_notification_trigger', function (e) {
         notification.close();
