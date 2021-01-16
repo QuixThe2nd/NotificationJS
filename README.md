@@ -1,5 +1,5 @@
 # NotificationJS
-A simple library for handling web notifications. Check index.html for a demo.
+A simple library for handling web notifications. Check index.html for a demo. This library must be run on a website (e.g example.com or localhost), it won't work if you open the html file in your browser.
 ## Examples
 ### Simple Notification
 ```sendNotification("Notification Title", "{}");```
