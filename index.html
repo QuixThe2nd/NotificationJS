@@ -16,14 +16,14 @@
     <script>
     // Set variables for Complex Notification example
     notification_body = 'Body text';
-    notification_icon = 'https:\/\/starfiles.co/favicon.ico';
+    notification_icon = 'https://openmoji.org/data/color/svg/1F643.svg';
     notification_dir = 'ltr';
     notification_lang = 'en';
     notification_requireInteraction = false;
     notification_silent = true;
     function notificationClicked(e){
         e.preventDefault(); // Prevent the browser from focusing the Notification's tab
-        window.open('https://starfiles.co', '_blank');
+        window.open('https://example.com', '_blank');
         closeNotification();
     }
     function notificationShown(){
