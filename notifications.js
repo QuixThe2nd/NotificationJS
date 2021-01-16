@@ -27,7 +27,7 @@ function sendNotification(title, configobj){
     }
     notification.onclick = function(e){
         if(typeof notificationClicked === 'function')
-            notificationClicked();
+            notificationClicked(e);
     }
     notification.onclose = function(){
         if(typeof notificationClosed === 'function')
