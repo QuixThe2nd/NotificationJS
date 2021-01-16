@@ -1,5 +1,5 @@
-const close_notification_trigger = new Event('close_notification_trigger');
 function initNotifications(){
+    const close_notification_trigger = new Event('close_notification_trigger');
     if(!("Notification" in window)){
         return 'unsupported';
     }else if(Notification.permission === "granted" || Notification.permission === "denied"){
